@@ -163,7 +163,7 @@ https://github.com/CamilaLima21/order-flow
 
 ## Collection POSTMAN
 
-A collection postman está disponível na raiz do projeto através do arquivo postman.json
+A collection postman está disponível na raiz do projeto através do arquivo "FIAP - TECH CHALLENGE 4.postman_collection.json.json"
 
 ## Licença
 Este projeto é licenciado sob a Licença MIT.
