@@ -30,8 +30,7 @@ Para visualizar a fase final e o resultado obtido durante o desenvolvimento do E
 
 https://miro.com/app/board/uXjVI0bo6mY=/
 
-![image]([https://github.com/user-attachments/assets/b9d339b5-78f8-450a-9d0e-f15b3014186a](https://github.com/CamilaLima21/order-flow/blob/main/MIRO.png?raw=true))
-
+![image](https://github.com/CamilaLima21/order-flow/blob/main/MIRO.png?raw=true)
 
 ## Modelo de Dados
 
@@ -89,7 +88,7 @@ A estrutura do sistema respeita as regras de negócio fornecidas e oferece uma b
 
 Abaixo segue a diagrama da modelagem de dados relacional do sistema: 
 
-![image]([https://github.com/user-attachments/assets/109de175-413e-4abf-90ad-e98555290ad9](https://github.com/CamilaLima21/order-flow/blob/main/Relacionamento.png?raw=true))
+![image](https://github.com/CamilaLima21/order-flow/blob/main/Relacionamento.png?raw=true))
 
 ## Como Executar
 
