@@ -1,0 +1,1302 @@
+{
+	"info": {
+		"_postman_id": "49a6c4e1-4824-4d11-93fd-e2e4d7cb9ec2",
+		"name": "FIAP - TECH CHALLENGE 4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39491917",
+		"_collection_link": "https://warped-desert-475245.postman.co/workspace/New-Team-Workspace~11bf750f-292b-4232-8000-dd6a61eebffa/collection/39491917-49a6c4e1-4824-4d11-93fd-e2e4d7cb9ec2?action=share&source=collection_link&creator=39491917"
+	},
+	"item": [
+		{
+			"name": "ms-clients",
+			"item": [
+				{
+					"name": "Client",
+					"item": [
+						{
+							"name": "Create Client",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Camila Marques de Lima\",\r\n    \"email\": \"camila.lima@gmail.com\",\r\n    \"cpf\": \"43536102875\",\r\n    \"birth\": \"1986-09-01\",\r\n    \"addressId\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/clients",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search All Clients",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/clients",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Client By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/clients/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Client By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/clients/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Client By Name",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/clients/name?name=Carlos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients",
+										"name"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Carlos"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Client By Email",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/clients/email?email=carlos.pereira%40email.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients",
+										"email"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "carlos.pereira%40email.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Client By Cpf",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/clients/cpf/12345678909",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients",
+										"cpf",
+										"12345678909"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Client By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"João Marques de Lima\",\r\n    \"email\": \"joao.lima@gmail.com\",\r\n    \"cpf\": \"26759526805\",\r\n    \"birth\": \"1986-09-01\",\r\n    \"addressId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/clients/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"clients",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "Create Address",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \r\n    \"street\": \"Rua Dois de São Paulo\",\r\n    \"number\": \"500\",\r\n    \"zipCode\": \"05894-440\",\r\n    \"complement\": \"N/A\"\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/addresses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search All Address",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/addresses",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Address By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/addresses/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"addresses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Address By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/addresses/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"addresses",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Address By Cep",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/addresses/cep/01001-000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"addresses",
+										"cep",
+										"01001-000"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Address By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"street\": \"Rua Dois de São Paulo\",\r\n    \"number\": \"515\",\r\n    \"zipCode\": \"05894-440\",\r\n    \"complement\": \"Apto 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8081/addresses/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"addresses",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ms-products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Cadeira Gamer\",\r\n        \"productSku\": \"PROD-0021231\",\r\n        \"price\": 799.99\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search All Products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Product By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Product By Sku",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/products/sku/PROD-009",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"products",
+								"sku",
+								"PROD-009"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cadeira Gamer\",\r\n    \"sku\": \"CG-1234\",\r\n    \"price\": 799.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/products/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"products",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-stocks",
+			"item": [
+				{
+					"name": "Create Stock",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\": \"PROD-010a\",\r\n    \"quantity\": 200\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/stocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search All Stocks",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stocks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Stock By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stocks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Stock By Sku",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stocks/sku/PROD-001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"sku",
+								"PROD-001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stock By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\": \"PROD-001\",\r\n    \"quantity\": 115\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/stocks/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Stock By Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stocks/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Increase Stock By Sku",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stocks/increase?sku=PROD-009&quantity=130",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"increase"
+							],
+							"query": [
+								{
+									"key": "sku",
+									"value": "PROD-009"
+								},
+								{
+									"key": "quantity",
+									"value": "130"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrease Stock By Sku",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/stocks/decrease?sku=PROD-009&quantity=130",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stocks",
+								"decrease"
+							],
+							"query": [
+								{
+									"key": "sku",
+									"value": "PROD-009"
+								},
+								{
+									"key": "quantity",
+									"value": "130"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ms-orders",
+			"item": [
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "Search All Orders",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Order",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"clientId\": 1,\r\n  \"items\": [\r\n    {\r\n      \"productSku\": \"PROD-009\",\r\n      \"quantity\": 1,\r\n      \"price\": 50.25\r\n    },\r\n    {\r\n      \"productSku\": \"PROD-009\",\r\n      \"quantity\": 1,\r\n      \"price\": 60.25\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Order Payment",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/orders/1/payment?paymentMethod=CARD",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"orders",
+										"1",
+										"payment"
+									],
+									"query": [
+										{
+											"key": "paymentMethod",
+											"value": "CARD"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Order By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/orders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"orders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Order By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"clientId\": 1,\r\n    \"total\": 10,\r\n    \"status\": \"CREATED\",\r\n    \"createdAt\": \"2025-05-02T17:31:00.382Z\",\r\n    \"updatedAt\": \"2025-05-02T17:31:00.382Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/orders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"orders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Order By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/orders/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"orders",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Order Items",
+					"item": [
+						{
+							"name": "Create Order-Items",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"orderId\": 1,\r\n  \"productSku\": \"PROD-009\",\r\n  \"quantity\": 2,\r\n  \"price\": 50.25\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/order-items",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"order-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search All Items",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/order-items",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"order-items"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search Items in Order By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/order-items/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"order-items",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Items in Order By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"orderId\": 1,\r\n    \"productSku\": 2,\r\n    \"quantity\": 10,\r\n    \"price\": 48\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8083/order-items/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"order-items",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Order Item By Id",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8083/order-items/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8083",
+									"path": [
+										"order-items",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ms-payments",
+			"item": [
+				{
+					"name": "Generate Token Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Basic Y2xpZW50LTAxOnNlY3JldC1rZXktMDI=",
+								"disabled": true
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"grant_type\": \"client_credentials\",\r\n    \"client_id\": \"seu_client_id\",\r\n    \"client_secret\": \"seu_client_secret\",\r\n    \"scope\": \"oob\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8084/payment/generateToken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payment",
+								"generateToken"
+							],
+							"query": [
+								{
+									"key": "scope",
+									"value": "oob",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \\\r\nhttps://api-homologacao.getnet.com.br/auth/oauth/v2/token \\\r\n-H 'authorization: Basic Y2xpZW50LTAxOnNlY3JldC1rZXktMDI=' \\\r\n-H 'content-type: application/x-www-form-urlencoded' \\\r\n-d 'scope=oob&grant_type=client_credentials'"
+					},
+					"response": []
+				},
+				{
+					"name": "Payment PIX - Generate QR Code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Basic Y2xpZW50LTAxOnNlY3JldC1rZXktMDI="
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 123.45,\r\n    \"currency\": \"BRL\",\r\n    \"orderId\": \"1\",\r\n    \"customerId\": \"1\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8084/payment/generateQR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payment",
+								"generateQR"
+							],
+							"query": [
+								{
+									"key": "scope",
+									"value": "oob",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \\\r\nhttps://api-homologacao.getnet.com.br/auth/oauth/v2/token \\\r\n-H 'authorization: Basic Y2xpZW50LTAxOnNlY3JldC1rZXktMDI=' \\\r\n-H 'content-type: application/x-www-form-urlencoded' \\\r\n-d 'scope=oob&grant_type=client_credentials'"
+					},
+					"response": []
+				},
+				{
+					"name": "Payment Status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "123",
+								"type": "text"
+							},
+							{
+								"key": "seller_id",
+								"value": "123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8084/payment/1232323",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payment",
+								"1232323"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment Card",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer Y2xpZW50LTAxOnNlY3JldC1rZXktMDI="
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"seller_id\": \"ABC123\",\r\n  \"amount\": 100.00,\r\n  \"currency\": \"BRL\",\r\n  \"order\": {\r\n    \"order_id\": \"48\",\r\n    \"items\": [\r\n      {\r\n        \"name\": \"Produto Teste\",\r\n        \"quantity\": 1,\r\n        \"unit_amount\": 100.00\r\n      }\r\n    ]\r\n  },\r\n  \"customer\": {\r\n    \"customer_id\": \"12345\",\r\n    \"first_name\": \"João\",\r\n    \"last_name\": \"Silva\",\r\n    \"email\": \"joao.silva@email.com\",\r\n    \"phone\": \"+5511999999999\"\r\n  },\r\n  \"credit\": {\r\n    \"card\": {\r\n      \"number_token\": \"tok_123456789\",\r\n      \"cardholder_name\": \"JOAO SILVA\",\r\n      \"security_code\": \"123\",\r\n      \"expiration_month\": \"12\",\r\n      \"expiration_year\": \"2025\"\r\n    },\r\n    \"installments\": 1\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8084/payment/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"payment",
+								"card"
+							],
+							"query": [
+								{
+									"key": "scope",
+									"value": "oob",
+									"disabled": true
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \\\r\nhttps://api-homologacao.getnet.com.br/auth/oauth/v2/token \\\r\n-H 'authorization: Basic Y2xpZW50LTAxOnNlY3JldC1rZXktMDI=' \\\r\n-H 'content-type: application/x-www-form-urlencoded' \\\r\n-d 'scope=oob&grant_type=client_credentials'"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
