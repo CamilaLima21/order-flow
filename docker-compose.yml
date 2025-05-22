@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+
+  ms-products:
+    build:
+      context: ./ms-products
+      dockerfile: Dockerfile
+    ports:
+      - 8082:8082
+    networks:
+      - backend
+
+  ms-stock:
+    build:
+      context: ./ms-stock
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+
+  ms-clients:
+    build:
+      context: ./ms-clients
+      dockerfile: Dockerfile
+    ports:
+      - 8081:8081
+    networks:
+      - backend
+
+  ms-orders:
+    build:
+      context: ./ms-orders
+      dockerfile: Dockerfile
+    ports:
+      - 8083:8083
+    networks:
+      - backend
+
+  ms-payments:
+    build:
+      context: ./ms-payments
+      dockerfile: Dockerfile
+    ports:
+      - 8084:8084
+    networks:
+      - backend
+
+  wiremock:
+    image: wiremock/wiremock:3.3.1
+    container_name: payments-wiremock
+    ports:
+      - "8085:8080"  # Porta padrao interna do Wiremock
+      - "8088:8081"  # Porta extra se necessario
+    volumes:
+      - ./PaymentsWiremock:/home/wiremock
+    command: --global-response-templating --verbose
+    networks:
+      - backend
+
+networks:
+  backend:
